@@ -12,13 +12,14 @@
 *{margin:0;padding:0;box-sizing:border-box}
 html,body{height:100%}
 
+/* RESET LINKS (IMPORTANT) */
 a{
   color:inherit;
   text-decoration:none;
 }
 
 body{
-  background:linear-gradient(180deg,#0f0f0f,#000);
+  background:linear-gradient(180deg,#0e0e0e,#000);
   font-family:'Inter',sans-serif;
   color:#fff;
   overflow:hidden;
@@ -35,21 +36,21 @@ body{
 .bg-icon{
   position:absolute;
   width:140px;
-  opacity:.75;
-  filter:drop-shadow(0 0 30px rgba(255,255,255,.35));
-  animation:float 25s ease-in-out infinite;
+  opacity:.8;
+  filter:drop-shadow(0 0 35px rgba(255,255,255,.4));
+  animation:drift 25s ease-in-out infinite;
 }
 
 /* positions */
-.k1{top:5%;left:6%}
-.k2{top:35%;left:18%}
+.k1{top:5%;left:5%}
+.k2{top:35%;left:15%}
 .k3{bottom:15%;left:8%}
 
-.b1{top:8%;right:10%}
-.b2{top:45%;right:22%}
-.b3{bottom:18%;right:12%}
+.b1{top:10%;right:8%}
+.b2{top:45%;right:20%}
+.b3{bottom:20%;right:12%}
 
-@keyframes float{
+@keyframes drift{
   0%{transform:translate(0,0)}
   50%{transform:translate(60px,-40px)}
   100%{transform:translate(0,0)}
@@ -71,16 +72,16 @@ body{
   width:400px;
   padding:50px 40px;
   border-radius:30px;
-  background:linear-gradient(180deg,#151515,#080808);
+  background:linear-gradient(180deg,#141414,#070707);
   border:1px solid rgba(255,255,255,.08);
   box-shadow:
     0 60px 180px rgba(0,0,0,1),
     inset 0 0 40px rgba(255,255,255,.05);
   text-align:center;
-  animation:cardFloat 6s ease-in-out infinite;
+  animation:float 6s ease-in-out infinite;
 }
 
-@keyframes cardFloat{
+@keyframes float{
   0%{transform:translateY(0)}
   50%{transform:translateY(-18px)}
   100%{transform:translateY(0)}
@@ -136,7 +137,6 @@ body{
 
 .link.clickable{
   transition:.3s;
-  cursor:pointer;
 }
 
 .link.clickable:hover{
@@ -146,7 +146,6 @@ body{
 
 .link.disabled{
   opacity:.6;
-  cursor:default;
 }
 
 .footer{
@@ -159,22 +158,22 @@ body{
 
 <body>
 
-<!-- BACKGROUND ICONS (LOCAL FILES) -->
+<!-- BACKGROUND ICONS -->
 <div class="bg-layer">
-  <img class="bg-icon k1" src="kitty.png">
-  <img class="bg-icon k2" src="kitty.png">
-  <img class="bg-icon k3" src="kitty.png">
+  <img class="bg-icon k1" src="https://raw.githubusercontent.com/7tournament/starlight/main/IMG_1594.png">
+  <img class="bg-icon k2" src="https://raw.githubusercontent.com/7tournament/starlight/main/IMG_1594.png">
+  <img class="bg-icon k3" src="https://raw.githubusercontent.com/7tournament/starlight/main/IMG_1594.png">
 
-  <img class="bg-icon b1" src="barca.png">
-  <img class="bg-icon b2" src="barca.png">
-  <img class="bg-icon b3" src="barca.png">
+  <img class="bg-icon b1" src="https://raw.githubusercontent.com/7tournament/starlight/main/IMG_1595.png">
+  <img class="bg-icon b2" src="https://raw.githubusercontent.com/7tournament/starlight/main/IMG_1595.png">
+  <img class="bg-icon b3" src="https://raw.githubusercontent.com/7tournament/starlight/main/IMG_1595.png">
 </div>
 
 <div class="wrapper">
   <div class="card">
 
     <div class="avatar">
-      <img src="griffith.JPEG">
+      <img src="https://raw.githubusercontent.com/7tournament/Mywebsite/main/griffith.JPEG">
     </div>
 
     <div class="name">Amir</div>
