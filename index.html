@@ -1,203 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Amir</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIP Massage Kunduz</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap');
+        
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1a120b, #3a2a1f);
+            font-family: 'Roboto', sans-serif;
+            color: #f5e8c7;
+            overflow-x: hidden;
+        }
 
-<link href="https://fonts.googleapis.com/css2?family=Rock+Salt&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
 
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-html,body{height:100%}
+        header {
+            text-align: center;
+            padding: 60px 20px 40px;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
+        }
 
-/* RESET LINKS (IMPORTANT) */
-a{
-  color:inherit;
-  text-decoration:none;
-}
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 4.5rem;
+            color: #ffd700;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.8),
+                         0 0 40px rgba(255, 215, 0, 0.4);
+            letter-spacing: 4px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
 
-body{
-  background:linear-gradient(180deg,#0e0e0e,#000);
-  font-family:'Inter',sans-serif;
-  color:#fff;
-  overflow:hidden;
-}
+        .tagline {
+            font-size: 1.4rem;
+            color: #e6c77f;
+            letter-spacing: 3px;
+            margin-top: 0;
+        }
 
-/* ===== BACKGROUND ICONS ===== */
-.bg-layer{
-  position:fixed;
-  inset:0;
-  z-index:0;
-  pointer-events:none;
-}
+        .hero {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.6);
+            border: 3px solid #ffd700;
+            border-radius: 20px;
+            padding: 50px 40px;
+            box-shadow: 0 0 60px rgba(255, 215, 0, 0.3);
+            margin-bottom: 60px;
+        }
 
-.bg-icon{
-  position:absolute;
-  width:140px;
-  opacity:.8;
-  filter:drop-shadow(0 0 35px rgba(255,255,255,.4));
-  animation:drift 25s ease-in-out infinite;
-}
+        .massage-box {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
 
-/* positions */
-.k1{top:5%;left:5%}
-.k2{top:35%;left:15%}
-.k3{bottom:15%;left:8%}
+        .empty-box {
+            width: 100%;
+            height: 420px;
+            border: 4px dashed #ffd700;
+            background: rgba(255, 215, 0, 0.05);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #b38b3d;
+            font-size: 1.1rem;
+            text-align: center;
+            margin-bottom: 20px;
+            box-shadow: inset 0 0 30px rgba(255, 215, 0, 0.2);
+        }
 
-.b1{top:10%;right:8%}
-.b2{top:45%;right:20%}
-.b3{bottom:20%;right:12%}
+        .description {
+            flex: 1;
+            min-width: 300px;
+            line-height: 1.8;
+            font-size: 1.25rem;
+        }
 
-@keyframes drift{
-  0%{transform:translate(0,0)}
-  50%{transform:translate(60px,-40px)}
-  100%{transform:translate(0,0)}
-}
+        .description h2 {
+            color: #ffd700;
+            font-size: 2.2rem;
+            margin-top: 0;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+        }
 
-/* ===== CENTER ===== */
-.wrapper{
-  position:relative;
-  z-index:2;
-  width:100%;
-  height:100%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
+        .highlight {
+            color: #ffeb99;
+            font-weight: 500;
+        }
 
-/* ===== CARD ===== */
-.card{
-  width:400px;
-  padding:50px 40px;
-  border-radius:30px;
-  background:linear-gradient(180deg,#141414,#070707);
-  border:1px solid rgba(255,255,255,.08);
-  box-shadow:
-    0 60px 180px rgba(0,0,0,1),
-    inset 0 0 40px rgba(255,255,255,.05);
-  text-align:center;
-  animation:float 6s ease-in-out infinite;
-}
+        .customers-section {
+            margin-top: 80px;
+        }
 
-@keyframes float{
-  0%{transform:translateY(0)}
-  50%{transform:translateY(-18px)}
-  100%{transform:translateY(0)}
-}
+        .section-title {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #ffd700;
+            margin-bottom: 50px;
+            text-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+        }
 
-/* ===== AVATAR ===== */
-.avatar{
-  width:140px;
-  height:140px;
-  margin:0 auto 22px;
-  border-radius:50%;
-  overflow:hidden;
-  border:2px solid rgba(255,255,255,.15);
-  box-shadow:0 0 35px rgba(255,255,255,.25);
-}
+        .customers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
 
-.avatar img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
+        .customer-card {
+            background: linear-gradient(145deg, #2c2118, #1a120b);
+            border: 2px solid #d4af37;
+            border-radius: 18px;
+            padding: 35px 30px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+            transition: transform 0.3s ease;
+        }
 
-/* ===== TEXT ===== */
-.name{
-  font-family:'Rock Salt',cursive;
-  font-size:2.2rem;
-  margin-bottom:14px;
-}
+        .customer-card:hover {
+            transform: translateY(-10px);
+        }
 
-.desc{
-  font-size:.95rem;
-  line-height:1.7;
-  opacity:.85;
-  margin-bottom:30px;
-}
+        .customer-card h3 {
+            color: #ffd700;
+            font-size: 1.6rem;
+            margin: 15px 0 10px;
+        }
 
-/* ===== LINKS ===== */
-.link{
-  padding:16px;
-  margin-bottom:14px;
-  border-radius:999px;
-  background:linear-gradient(145deg,#1a1a1a,#0a0a0a);
-  font-size:.85rem;
-  letter-spacing:.15em;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:10px;
-  box-shadow:
-    inset 0 0 15px rgba(255,255,255,.05),
-    0 12px 35px rgba(0,0,0,.9);
-}
+        .stars {
+            color: #ffd700;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
 
-.link.clickable{
-  transition:.3s;
-}
+        .testimonial {
+            font-style: italic;
+            color: #e6c77f;
+            line-height: 1.7;
+        }
 
-.link.clickable:hover{
-  transform:scale(1.08);
-  box-shadow:0 0 35px rgba(255,255,255,.25);
-}
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 2px solid #d4af37;
+            margin-top: 80px;
+            color: #b38b3d;
+            font-size: 1.1rem;
+        }
 
-.link.disabled{
-  opacity:.6;
-}
+        .golden-button {
+            display: inline-block;
+            background: linear-gradient(#ffd700, #b38b3d);
+            color: #1a120b;
+            padding: 16px 40px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            border-radius: 50px;
+            text-decoration: none;
+            margin-top: 30px;
+            box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4);
+            transition: all 0.3s;
+        }
 
-.footer{
-  margin-top:28px;
-  font-size:.65rem;
-  opacity:.5;
-}
-</style>
+        .golden-button:hover {
+            transform: scale(1.08);
+            box-shadow: 0 12px 30px rgba(255, 215, 0, 0.6);
+        }
+
+        @media (max-width: 768px) {
+            .logo { font-size: 3rem; }
+            .hero { padding: 30px 20px; }
+        }
+    </style>
 </head>
-
 <body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="logo">VIP MASSAGE</div>
+            <p class="tagline">KUNDUZ • AFGHANISTAN</p>
+        </header>
 
-<!-- BACKGROUND ICONS -->
-<div class="bg-layer">
-  <img class="bg-icon k1" src="https://raw.githubusercontent.com/7tournament/starlight/main/IMG_1594.png">
-  <img class="bg-icon k2" src="https://raw.githubusercontent.com/7tournament/starlight/main/IMG_1594.png">
-  <img class="bg-icon k3" src="https://raw.githubusercontent.com/7tournament/starlight/main/IMG_1594.png">
+        <!-- Main Hero Section -->
+        <div class="hero">
+            <div class="massage-box">
+                <h2 style="color:#ffd700; text-align:center; margin-bottom:15px;">Our Premium Massager</h2>
+                <!-- Empty box for you to insert the picture -->
+                <div class="empty-box">
+                    <div>
+                        <strong>PLACE YOUR MASSAGER PHOTO HERE</strong><br>
+                        <small>(Recommended size: 800×800 px)</small>
+                    </div>
+                </div>
+                <a href="#" class="golden-button">Book Your Session Now</a>
+            </div>
 
-  <img class="bg-icon b1" src="https://raw.githubusercontent.com/7tournament/starlight/main/IMG_1595.png">
-  <img class="bg-icon b2" src="https://raw.githubusercontent.com/7tournament/starlight/main/IMG_1595.png">
-  <img class="bg-icon b3" src="https://raw.githubusercontent.com/7tournament/starlight/main/IMG_1595.png">
-</div>
+            <div class="description">
+                <h2>Experience True Relaxation in Kunduz</h2>
+                <p>Discover the ultimate luxury massage experience right here in <span class="highlight">Kunduz, Afghanistan</span>. Our VIP Massage brings ancient Afghan healing traditions together with modern techniques to melt away stress, ease muscle tension, and rejuvenate your body and soul.</p>
+                
+                <p>Whether you’re a busy professional, a traveler, or simply someone who deserves the best care, our professional therapists provide personalized treatments in a private, elegant, and secure environment.</p>
+                
+                <p class="highlight">✦ Deep Tissue Relief<br>
+                ✦ Aromatic Oils from Local Herbs<br>
+                ✦ Complete Privacy &amp; Comfort<br>
+                ✦ 100% Satisfaction Guaranteed</p>
+                
+                <p>Escape the daily hustle and treat yourself to the finest massage Kunduz has ever offered. Your body will thank you.</p>
+            </div>
+        </div>
 
-<div class="wrapper">
-  <div class="card">
+        <!-- Satisfied Customers Section -->
+        <div class="customers-section">
+            <h2 class="section-title">Satisfied Customers</h2>
+            
+            <div class="customers-grid">
+                <!-- Customer 1 -->
+                <div class="customer-card">
+                    <div class="stars">★★★★★</div>
+                    <h3>Abbas</h3>
+                    <p class="testimonial">
+                        "The best massage I have ever had in Afghanistan. I feel completely refreshed and full of energy. The therapists are highly professional and the atmosphere is perfect. Highly recommended!"
+                    </p>
+                    <p style="margin-top:20px; color:#b38b3d;">— Kunduz</p>
+                </div>
 
-    <div class="avatar">
-      <img src="https://raw.githubusercontent.com/7tournament/Mywebsite/main/griffith.JPEG">
+                <!-- Customer 2 -->
+                <div class="customer-card">
+                    <div class="stars">★★★★★</div>
+                    <h3>Omid</h3>
+                    <p class="testimonial">
+                        "VIP Massage Kunduz exceeded all my expectations. The golden service, relaxing music, and skilled hands made me feel like royalty. I will definitely come back every week!"
+                    </p>
+                    <p style="margin-top:20px; color:#b38b3d;">— Kunduz</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p><strong>VIP Massage Kunduz</strong> • Premium Relaxation Experience</p>
+            <p>Contact us today for your exclusive appointment</p>
+            <p style="margin-top: 20px; font-size: 0.95rem;">
+                Made with ❤️ for the people of Kunduz, Afghanistan
+            </p>
+        </div>
     </div>
-
-    <div class="name">Amir</div>
-
-    <div class="desc">
-      hello this is amir, and im 15 years old and i lift weights,<br>
-      if you want to ask me anything follow my insta / tiktok (:
-    </div>
-
-    <div class="link disabled">
-      <i class="bi bi-discord"></i> @tjzamir
-    </div>
-
-    <a class="link clickable" href="https://www.tiktok.com/@kingdedyn" target="_blank">
-      <i class="bi bi-tiktok"></i> @kingdedyn
-    </a>
-
-    <a class="link clickable" href="https://www.instagram.com/14kvoidzz" target="_blank">
-      <i class="bi bi-instagram"></i> @14kvoidzz
-    </a>
-
-    <div class="footer">Amir © all rights reserved</div>
-  </div>
-</div>
-
 </body>
 </html>
