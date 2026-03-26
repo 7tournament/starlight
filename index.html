@@ -5,224 +5,222 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VIP Massage Kunduz</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap');
-        
-        body {
+        /* ----- CLEAN, MINIMAL, NO SHADOWS ANYWHERE ----- */
+        * {
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #1a120b, #3a2a1f);
-            font-family: 'Roboto', sans-serif;
-            color: #f5e8c7;
-            overflow-x: hidden;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #ffffff;
+            font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            color: #1f1f1f;
+            line-height: 1.5;
         }
 
         .container {
             max-width: 1100px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 2rem 1.5rem;
         }
 
+        /* Header – simple border bottom */
         header {
             text-align: center;
-            padding: 60px 20px 40px;
-            background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
+            padding: 1.5rem 1rem 1rem;
+            border-bottom: 1px solid #eaeaea;
+            margin-bottom: 2rem;
         }
 
         .logo {
             font-family: 'Playfair Display', serif;
-            font-size: 4.5rem;
-            color: #ffd700;
-            text-shadow: 0 0 20px rgba(255, 215, 0, 0.8),
-                         0 0 40px rgba(255, 215, 0, 0.4);
-            letter-spacing: 4px;
-            margin-bottom: 10px;
-            text-transform: uppercase;
+            font-size: 2.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: #b8860b;
+            margin-bottom: 0.4rem;
         }
 
         .tagline {
-            font-size: 1.4rem;
-            color: #e6c77f;
-            letter-spacing: 3px;
-            margin-top: 0;
+            font-size: 1rem;
+            font-weight: 400;
+            color: #6c6c6c;
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
 
-        .hero {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 40px;
-            align-items: center;
-            background: rgba(0, 0, 0, 0.6);
-            border: 3px solid #ffd700;
+        /* Description section – full width, no shadow */
+        .description-section {
+            background: #ffffff;
+            border: 1px solid #ece5dc;
             border-radius: 20px;
-            padding: 50px 40px;
-            box-shadow: 0 0 60px rgba(255, 215, 0, 0.3);
-            margin-bottom: 60px;
+            padding: 2.5rem 2rem;
+            margin-bottom: 3rem;
         }
 
-        .massage-box {
-            flex: 1;
-            min-width: 300px;
-            text-align: center;
+        .description-section h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #b8860b;
+            margin-bottom: 1.2rem;
         }
 
-        .empty-box {
-            width: 100%;
-            height: 420px;
-            border: 4px dashed #ffd700;
-            background: rgba(255, 215, 0, 0.05);
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #b38b3d;
-            font-size: 1.1rem;
-            text-align: center;
-            margin-bottom: 20px;
-            box-shadow: inset 0 0 30px rgba(255, 215, 0, 0.2);
-        }
-
-        .description {
-            flex: 1;
-            min-width: 300px;
-            line-height: 1.8;
-            font-size: 1.25rem;
-        }
-
-        .description h2 {
-            color: #ffd700;
-            font-size: 2.2rem;
-            margin-top: 0;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+        .description-section p {
+            margin-bottom: 1rem;
+            color: #2c2c2c;
+            font-size: 1rem;
+            line-height: 1.6;
         }
 
         .highlight {
-            color: #ffeb99;
+            color: #b8860b;
             font-weight: 500;
         }
 
+        .feature-list {
+            margin: 1.2rem 0;
+            padding-left: 0;
+            list-style: none;
+        }
+
+        .feature-list li {
+            margin-bottom: 0.4rem;
+            color: #3a2a1f;
+        }
+
+        /* Simple button – flat, no gradient, no shadow */
+        .booking-button {
+            display: inline-block;
+            background-color: #b8860b;
+            color: white;
+            padding: 0.85rem 2.2rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 40px;
+            border: none;
+            margin-top: 1rem;
+            transition: background-color 0.2s ease;
+        }
+
+        .booking-button:hover {
+            background-color: #9a6e0b;
+        }
+
+        /* Customers section – clean cards */
         .customers-section {
-            margin-top: 80px;
+            margin-top: 2rem;
         }
 
         .section-title {
             text-align: center;
             font-family: 'Playfair Display', serif;
-            font-size: 2.8rem;
-            color: #ffd700;
-            margin-bottom: 50px;
-            text-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+            font-size: 2rem;
+            font-weight: 600;
+            color: #b8860b;
+            margin-bottom: 2rem;
         }
 
         .customers-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
         }
 
         .customer-card {
-            background: linear-gradient(145deg, #2c2118, #1a120b);
-            border: 2px solid #d4af37;
-            border-radius: 18px;
-            padding: 35px 30px;
+            background: #ffffff;
+            border: 1px solid #ece5dc;
+            border-radius: 16px;
+            padding: 1.8rem;
             text-align: center;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
-            transition: transform 0.3s ease;
-        }
-
-        .customer-card:hover {
-            transform: translateY(-10px);
         }
 
         .customer-card h3 {
-            color: #ffd700;
-            font-size: 1.6rem;
-            margin: 15px 0 10px;
+            color: #b8860b;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 0.75rem 0 0.5rem;
         }
 
         .stars {
-            color: #ffd700;
-            font-size: 1.8rem;
-            margin-bottom: 15px;
+            color: #f4b942;
+            font-size: 1.6rem;
+            letter-spacing: 2px;
+            margin-bottom: 0.75rem;
         }
 
         .testimonial {
-            font-style: italic;
-            color: #e6c77f;
-            line-height: 1.7;
+            font-style: normal;
+            color: #3d3d3d;
+            line-height: 1.5;
+            font-size: 0.95rem;
         }
 
+        .customer-card p:last-of-type {
+            margin-top: 1rem;
+            color: #8b7a66;
+            font-size: 0.85rem;
+        }
+
+        /* Simple footer */
         .footer {
             text-align: center;
-            padding: 40px 20px;
-            border-top: 2px solid #d4af37;
-            margin-top: 80px;
-            color: #b38b3d;
-            font-size: 1.1rem;
+            padding: 2rem 1rem;
+            border-top: 1px solid #ececec;
+            margin-top: 3.5rem;
+            color: #7a6e5c;
+            font-size: 0.85rem;
         }
 
-        .golden-button {
-            display: inline-block;
-            background: linear-gradient(#ffd700, #b38b3d);
-            color: #1a120b;
-            padding: 16px 40px;
-            font-size: 1.3rem;
-            font-weight: bold;
-            border-radius: 50px;
-            text-decoration: none;
-            margin-top: 30px;
-            box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4);
-            transition: all 0.3s;
-        }
-
-        .golden-button:hover {
-            transform: scale(1.08);
-            box-shadow: 0 12px 30px rgba(255, 215, 0, 0.6);
+        .footer p {
+            margin: 0.25rem 0;
         }
 
         @media (max-width: 768px) {
-            .logo { font-size: 3rem; }
-            .hero { padding: 30px 20px; }
+            .logo {
+                font-size: 2.2rem;
+            }
+            .description-section {
+                padding: 1.8rem;
+            }
+            .description-section h2 {
+                font-size: 1.6rem;
+            }
+            .section-title {
+                font-size: 1.8rem;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Header -->
+        <!-- Header: no shadow text -->
         <header>
             <div class="logo">VIP MASSAGE</div>
             <p class="tagline">KUNDUZ • AFGHANISTAN</p>
         </header>
 
-        <!-- Main Hero Section -->
-        <div class="hero">
-            <div class="massage-box">
-                <h2 style="color:#ffd700; text-align:center; margin-bottom:15px;">Our Premium Massager</h2>
-                <!-- Empty box for you to insert the picture -->
-                <div class="empty-box">
-                    <div>
-                        <strong>PLACE YOUR MASSAGER PHOTO HERE</strong><br>
-                        <small>(Recommended size: 800×800 px)</small>
-                    </div>
-                </div>
-                <a href="#" class="golden-button">Book Your Session Now</a>
-            </div>
-
-            <div class="description">
-                <h2>Experience True Relaxation in Kunduz</h2>
-                <p>Discover the ultimate luxury massage experience right here in <span class="highlight">Kunduz, Afghanistan</span>. Our VIP Massage brings ancient Afghan healing traditions together with modern techniques to melt away stress, ease muscle tension, and rejuvenate your body and soul.</p>
-                
-                <p>Whether you’re a busy professional, a traveler, or simply someone who deserves the best care, our professional therapists provide personalized treatments in a private, elegant, and secure environment.</p>
-                
-                <p class="highlight">✦ Deep Tissue Relief<br>
-                ✦ Aromatic Oils from Local Herbs<br>
-                ✦ Complete Privacy &amp; Comfort<br>
-                ✦ 100% Satisfaction Guaranteed</p>
-                
-                <p>Escape the daily hustle and treat yourself to the finest massage Kunduz has ever offered. Your body will thank you.</p>
-            </div>
+        <!-- Main content – premium box removed, only description + button -->
+        <div class="description-section">
+            <h2>Experience True Relaxation in Kunduz</h2>
+            <p>Discover the ultimate luxury massage experience right here in <span class="highlight">Kunduz, Afghanistan</span>. Our VIP Massage brings ancient Afghan healing traditions together with modern techniques to melt away stress, ease muscle tension, and rejuvenate your body and soul.</p>
+            
+            <p>Whether you’re a busy professional, a traveler, or simply someone who deserves the best care, our professional therapists provide personalized treatments in a private, elegant, and secure environment.</p>
+            
+            <ul class="feature-list">
+                <li>✦ Deep Tissue Relief</li>
+                <li>✦ Aromatic Oils from Local Herbs</li>
+                <li>✦ Complete Privacy &amp; Comfort</li>
+                <li>✦ 100% Satisfaction Guaranteed</li>
+            </ul>
+            
+            <p>Escape the daily hustle and treat yourself to the finest massage Kunduz has ever offered. Your body will thank you.</p>
+            
+            <a href="#" class="booking-button">Book Your Session Now</a>
         </div>
 
-        <!-- Satisfied Customers Section -->
+        <!-- Satisfied Customers – no shadows, flat cards -->
         <div class="customers-section">
             <h2 class="section-title">Satisfied Customers</h2>
             
@@ -234,7 +232,7 @@
                     <p class="testimonial">
                         "The best massage I have ever had in Afghanistan. I feel completely refreshed and full of energy. The therapists are highly professional and the atmosphere is perfect. Highly recommended!"
                     </p>
-                    <p style="margin-top:20px; color:#b38b3d;">— Kunduz</p>
+                    <p>— Kunduz</p>
                 </div>
 
                 <!-- Customer 2 -->
@@ -244,7 +242,7 @@
                     <p class="testimonial">
                         "VIP Massage Kunduz exceeded all my expectations. The golden service, relaxing music, and skilled hands made me feel like royalty. I will definitely come back every week!"
                     </p>
-                    <p style="margin-top:20px; color:#b38b3d;">— Kunduz</p>
+                    <p>— Kunduz</p>
                 </div>
             </div>
         </div>
@@ -253,9 +251,7 @@
         <div class="footer">
             <p><strong>VIP Massage Kunduz</strong> • Premium Relaxation Experience</p>
             <p>Contact us today for your exclusive appointment</p>
-            <p style="margin-top: 20px; font-size: 0.95rem;">
-                Made with ❤️ for the people of Kunduz, Afghanistan
-            </p>
+            <p>Made with ❤️ for the people of Kunduz, Afghanistan</p>
         </div>
     </div>
 </body>
